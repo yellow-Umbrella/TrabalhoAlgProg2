@@ -5,9 +5,7 @@
 	 protected int value;
 	 protected Node next, prev;
 	 
-	 public Node() {
-		 
-	 }
+	 public Node() {}
 	 
 	 public Node(int value) {
 		 this.value = value;
@@ -15,27 +13,22 @@
 	 
  }
  
-/**
- * 
- * @author yellow-Umbrella
- *
- */
-public class DoublyLinkedList implements List {
+public class LinkedList implements List {
 	
 	private int size = 0;
 	private Node head, tail;
 	
-	public DoublyLinkedList() {
-		
-	}
-	
-	public DoublyLinkedList(int vet[]) {
+	public LinkedList(int vet[]) {
 		first(new Node(vet[0]));
 		size++;
 		for(int i = 1; i < vet.length; i++, size++)
 			add(vet[i]);
 	}
 	
+	public LinkedList() {
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * Adiciona inteiro no final da lista.
 	 * @param obj inteiro a ser colocado na lista.

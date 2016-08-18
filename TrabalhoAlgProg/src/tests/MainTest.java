@@ -6,7 +6,7 @@ import sorting.BubbleSort;
 import sorting.InserctionSort;
 import sorting.SelectionSort;
 
-import util.DoublyLinkedList;
+import util.LinkedList;
 
 // Testando os algoritmos BubbleSort, InserctionSort, SelectionSort e BubbleLinked(BubbleSort com linkedList)
 
@@ -35,7 +35,7 @@ public class MainTest {
 			System.out.printf("%d ", x);
 		System.out.println();
 		
-		DoublyLinkedList list = new DoublyLinkedList(vet1);
+		LinkedList list = new LinkedList(vet1);
 		link.sort(list);
 		
 		for(int i = 0; i < list.size(); i++)
