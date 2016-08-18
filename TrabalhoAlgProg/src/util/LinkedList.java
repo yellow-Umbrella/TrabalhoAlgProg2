@@ -25,9 +25,7 @@ public class LinkedList implements List {
 			add(vet[i]);
 	}
 	
-	public LinkedList() {
-		// TODO Auto-generated constructor stub
-	}
+	public LinkedList() {}
 
 	/**
 	 * Adiciona inteiro no final da lista.
@@ -195,6 +193,31 @@ public class LinkedList implements List {
 		this.tail = node;
 		size++;
 	}
+	
+	/**
+	 * 
+	 * @param begin include 0
+	 * @param end exclude end i.e end 10 go only to 9
+	 * @return
+	 */
+//	public LinkedList subList(int begin, int end) {
+//		LinkedList newList = new LinkedList();
+//		Node nodeB = get(begin);
+//		nodeB.prev = null;
+//		newList.head = nodeB;
+//		
+//		Node nodeE = get(end-1);
+//		nodeE.next = null;
+//		newList.tail = nodeE;
+//		
+//		Node n = newList.head;
+//		while(n != null) {
+//			newList.size++;
+//			n = n.next;
+//		}
+//		
+//		return newList;
+//	}
 	
 	@Override
 	public String toString() {
