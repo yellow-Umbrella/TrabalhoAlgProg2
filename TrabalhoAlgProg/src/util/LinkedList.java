@@ -1,6 +1,7 @@
- package util;
+package util;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 class Node {
 	 
@@ -15,7 +16,7 @@ class Node {
 	 
  }
  
-public class LinkedList implements List , Iterable<Node>{
+public class LinkedList implements List , Iterable<Integer>{
 	
 	private int size = 0;
 	private Node head, tail;
@@ -245,11 +246,40 @@ public class LinkedList implements List , Iterable<Node>{
 			}
 		}
 		return stg;
+		
 	}
 
 	@Override
-	public Iterator<Node> iterator() {
-		return null;
+	public Iterator<Integer> iterator() {
+		final LinkedList list = this;
+		
+		return new Iterator<Integer>() {
+			final Node first = list.head;
+			Node current = null;
+			
+			@Override
+			public boolean hasNext() {
+				if(list.isEmpty() || current == list.tail) //ask why it does'n work with .equals()
+					return false;
+				return true;
+			}
+
+			@Override
+			public Integer next() {
+				if(list.isEmpty())
+					throw new NoSuchElementException();
+				else if(current == null) {
+					this.current = first;
+					return current.value;
+				}
+				else if(current.next == null)
+					throw new NoSuchElementException();
+				
+				this.current = current.next;
+				return current.value;
+			}
+			
+		};
 	}
 
 }
