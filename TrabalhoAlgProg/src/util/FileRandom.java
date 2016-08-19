@@ -23,7 +23,7 @@ public class FileRandom {
 		Random rand = new Random();
 		BufferedWriter out = new BufferedWriter(new FileWriter(path));
 		for (int i = 0; i < length; i++) {
-			out.write(rand.nextInt(2147483647) + "");
+			out.write(rand.nextInt(Integer.MAX_VALUE) + "");
 			if (i != length-1)
 				out.newLine();
 		}
