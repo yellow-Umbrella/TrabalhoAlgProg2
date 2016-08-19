@@ -2,7 +2,7 @@ package linkedSort;
 
 import util.LinkedList;
 
-public class BubbleLinked {
+public class BubbleSort {
 	
 	public void sort(LinkedList list) {
 		
