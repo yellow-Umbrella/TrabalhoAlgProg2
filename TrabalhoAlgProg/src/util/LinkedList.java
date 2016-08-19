@@ -96,18 +96,27 @@ public class LinkedList implements List {
 	 */
 	@Override
 	public void remove(int index) {
-		if(size > 0) {
-			Node remove = head;
-			while(index > 0) {
-				remove = remove.next;
-				index--;
+		if(size > 0 && index < size) {
+			if (index == 0) {
+				head = head.next;
+				head.prev = null;
 			}
-			
-			remove.prev.next = remove.next;
-			remove.next.prev = remove.prev;
-			remove = null;
+			else if (index == size - 1) {
+				tail = tail.prev;
+				tail.next = null;
+			}
+			else {
+				Node remove = head;
+				while(index > 0) {
+					remove = remove.next;
+					index--;
+				}
+				
+				remove.prev.next = remove.next;
+				remove.next.prev = remove.prev;
+				remove = null;
+			}
 			size--;
-			
 		}
 		
 	}
