@@ -2,7 +2,7 @@ package tests;
 
 import java.io.IOException;
 
-import linkedSort.BubbleLinked;
+import linkedSort.BubbleSort;
 import util.FileRandom;
 import util.LinkedList;
 
@@ -13,7 +13,7 @@ public class Test100000 {
 		
 		FileRandom file = new FileRandom();
 		LinkedList list = file.reader("100000.txt");
-		BubbleLinked bubble = new BubbleLinked();
+		BubbleSort bubble = new BubbleSort();
 		bubble.sort(list);
 		System.out.println(list.size());
 		System.out.println(list);

@@ -1,8 +1,8 @@
 package tests;
 
-import linkedSort.BubbleLinked;
+import linkedSort.BubbleSort;
 
-import sorting.BubbleSort;
+import sorting.BubbleSortDead;
 import sorting.InserctionSort;
 import sorting.SelectionSort;
 
@@ -16,10 +16,10 @@ public class MainTest {
 		int vet2[] = {22, 67, 48, 2, 93, 24, 25, 22, 18, 35};
 		int vet3[] = {22, 67, 48, 2, 93, 24, 25, 22, 18, 35};
 		
-		BubbleSort bubble = new BubbleSort();
+		BubbleSortDead bubble = new BubbleSortDead();
 		InserctionSort inserct = new InserctionSort();
 		SelectionSort select = new SelectionSort();
-		BubbleLinked link = new BubbleLinked();
+		BubbleSort link = new BubbleSort();
 		
 		bubble.sort(vet1);
 		inserct.sort(vet2);

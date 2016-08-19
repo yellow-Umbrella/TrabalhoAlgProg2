@@ -1,6 +1,6 @@
 package sorting;
 
-public class BubbleSort extends TheDadofSortings {
+public class BubbleSortDead extends TheDadofSortings {
 
 	@Override
 	public void sort(int[] vet) {
