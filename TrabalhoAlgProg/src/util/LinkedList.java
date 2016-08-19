@@ -1,4 +1,4 @@
- package util;
+package util;
 
 import java.util.Iterator;
 
@@ -245,11 +245,26 @@ public class LinkedList implements List , Iterable<Node>{
 			}
 		}
 		return stg;
+		
 	}
 
 	@Override
 	public Iterator<Node> iterator() {
-		return null;
+		
+		return new Iterator<Node>() {
+			
+			
+			@Override
+			public boolean hasNext() {
+				return false;
+			}
+
+			@Override
+			public Node next() {
+				return null;
+			}
+			
+		};
 	}
 
 }

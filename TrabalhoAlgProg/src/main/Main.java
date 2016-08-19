@@ -14,6 +14,8 @@ public class Main {
 		bubble.sort(list);
 		System.out.println(list.size());
 		System.out.println(list);
+		
+		
 	}
 
 }
