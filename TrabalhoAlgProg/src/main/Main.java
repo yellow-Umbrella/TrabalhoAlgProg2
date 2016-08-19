@@ -12,6 +12,7 @@ public class Main {
 		LinkedList list = file.reader("1000.txt");
 		BubbleLinked bubble = new BubbleLinked();
 		bubble.sort(list);
+		System.out.println(list.size());
 		System.out.println(list);
 	}
 
