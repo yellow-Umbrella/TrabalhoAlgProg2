@@ -1,6 +1,8 @@
  package util;
- 
- class Node {
+
+import java.util.Iterator;
+
+class Node {
 	 
 	 protected int value;
 	 protected Node next, prev;
@@ -13,7 +15,7 @@
 	 
  }
  
-public class LinkedList implements List {
+public class LinkedList implements List , Iterable<Node>{
 	
 	private int size = 0;
 	private Node head, tail;
@@ -71,23 +73,26 @@ public class LinkedList implements List {
 	 * @param index da posicao a ser adicionado 
 	 */
 	@Override
-	public boolean add(int obj, int index) throws RuntimeException {
+	public boolean add(int obj, int index) throws RuntimeException { //incompleto
 		if(isEmpty())
 			throw new RuntimeException("Lista vazia...");
-		
-		Node node = head;
-		while(index > 0) {
-			node = node.next;
-			index--;
+		if(index >= 0 && index < size) {
+			Node node = head;
+			while(index > 0) {
+				node = node.next;
+				index--;
+			}
+			
+			Node newNode = new Node(obj);
+			newNode.next = node.next;
+			newNode.prev = node;
+			node.next = newNode;
+			size++;
+			
+			return true;
 		}
-		
-		Node newNode = new Node(obj);
-		newNode.next = node.next;
-		newNode.prev = node;
-		node.next = newNode;
-		size++;
-		
-		return true;
+		else
+			throw new RuntimeException("IndexOutOfBoundsExceptionLOL");
 	}
 	
 	/**
@@ -240,6 +245,11 @@ public class LinkedList implements List {
 			}
 		}
 		return stg;
+	}
+
+	@Override
+	public Iterator<Node> iterator() {
+		return null;
 	}
 
 }

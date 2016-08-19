@@ -47,13 +47,16 @@ public class LinkedListTest {
 		System.out.println();
 		System.out.println("Add on head test...");
 		
-		list.addOnHead(99999);
+		list.addOnHead(99999); // add on head
 		for(int i = 0; i < list.size(); i++)
 			System.out.printf("%d ", list.getValue(i));
 		System.out.println();
 		
-		System.out.println(list);
+		System.out.println(list); // test toString
+		System.out.println();
 		
+		
+		list.add(7941, 9);
 		
 		
 		
