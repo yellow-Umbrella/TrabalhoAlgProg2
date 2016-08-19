@@ -226,7 +226,7 @@ public class LinkedList implements List {
 			Node node = head;
 		
 			while(node != null) {
-				stg += node.value;
+				stg += node.value + " ";
 				node = node.next;
 			}
 		}
