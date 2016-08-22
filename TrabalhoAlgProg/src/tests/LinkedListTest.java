@@ -68,7 +68,7 @@ public class LinkedListTest {
 		
 		
 		System.out.println("Test addOnIndex"); //add on index
-		list.add(7941, 5); // test add index...
+		list.add(7941, 5);
 		System.out.println(list);
 		System.out.println();
 		
@@ -84,10 +84,11 @@ public class LinkedListTest {
 		System.out.println(list);
 		System.out.println();
 		
-		System.out.println("Test bubble"); //not working
-		BubbleSortDead dead = new BubbleSortDead();
-		dead.sort(list);
-		System.out.println(list);
+		//Not working
+//		System.out.println("Test bubble");
+//		BubbleSortDead dead = new BubbleSortDead();
+//		dead.sort(list);
+//		System.out.println(list);
 		
 	}
 
