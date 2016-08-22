@@ -16,18 +16,30 @@ public class FileRandom {
         while ((line = in.readLine()) != null) {
         	list.add(Integer.parseInt(line));
         }
+        in.close();
         return list;
     }
 	
 	public void writer(String path, int length) throws IOException {
-		Random rand = new Random();
 		BufferedWriter out = new BufferedWriter(new FileWriter(path));
 		for (int i = 0; i < length; i++) {
-			out.write(rand.nextInt(Integer.MAX_VALUE) + "");
+			out.write(notEqual(path));
 			if (i != length-1)
 				out.newLine();
 		}
 		
 		out.close();
+	}
+	
+	private String notEqual(String path) throws IOException {
+		Random rand = new Random();
+		BufferedReader in = new BufferedReader(new FileReader(path));
+		String line, aux = rand.nextInt(Integer.MAX_VALUE) + "";
+		while ((line = in.readLine()) != null) { 
+			if (line.equals(aux))
+				notEqual(path);
+		}
+		in.close();
+		return aux;
 	}
 }
