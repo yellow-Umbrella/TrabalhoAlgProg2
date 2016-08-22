@@ -7,7 +7,7 @@ public interface List {
 	void remove(int index);
 	int size();
 	Node get(int index);
-	boolean swap(int i1, int i2);
+	void swap(int i1, int i2);
 	boolean isEmpty();
 
 }

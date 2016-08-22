@@ -3,32 +3,27 @@ package util;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-class Node {
-	 
-	 protected int value;
-	 protected Node next, prev;
-	 
-	 public Node() {}
-	 
-	 public Node(int value) {
-		 this.value = value;
-	 }
-	 
- }
- 
-public class LinkedList implements List , Iterable<Integer>{
+
+public class LinkedList implements List , Iterable<Node>{
 	
 	private int size = 0;
 	private Node head, tail;
 	
+	/**
+	 * Construtor cria uma lista vazia.
+	 */
+	public LinkedList() {}
+	
+	/**
+	 * Contrutor cria uma lista com o vetor recebido.
+	 * @param vet
+	 */
 	public LinkedList(int vet[]) {
 		first(new Node(vet[0]));
 		size++;
 		for(int i = 1; i < vet.length; i++, size++)
 			add(vet[i]);
 	}
-	
-	public LinkedList() {}
 
 	/**
 	 * Adiciona inteiro no final da lista.
@@ -79,7 +74,7 @@ public class LinkedList implements List , Iterable<Integer>{
 			throw new RuntimeException("Lista vazia...");
 		if(index >= 0 && index < size) {
 			Node node = head;
-			while(index > 0) {
+			while(index > 1) {
 				node = node.next;
 				index--;
 			}
@@ -131,17 +126,34 @@ public class LinkedList implements List , Iterable<Integer>{
 	 * Troca os valores das posicoes
 	 */
 	@Override
-	public boolean swap(int i1, int i2) throws RuntimeException {
+	public void swap(int i1, int i2) throws RuntimeException {
 		if(isEmpty())
 			throw new RuntimeException("Lista vazia...");
 		
-		int value1 = get(i1).value;
-		int value2 = get(i2).value;
+		if((i1 >= 0 && i1 < size) && (i2 > 0 && i2 < size)) {
+			int value1 = get(i1).value;
+			int value2 = get(i2).value;
+			
+			get(i1).value = value2;
+			get(i2).value = value1;
+		}
+		else
+			throw new RuntimeException("Index invalido...");
 		
-		get(i1).value = value2;
-		get(i2).value = value1;
+	}
+	
+	public void swap(Node n1, Node n2) throws RuntimeException {
+		if(isEmpty())
+			throw new RuntimeException("Lista vazia...");
 		
-		return true;
+		if(n1 != null && n2 != null) {
+			int aux = n1.value;
+			n1.value = n2.value;
+			n2.value = aux;
+		}
+		else
+			throw new RuntimeException("Noh nulo...");
+			
 	}
 	
 	/**
@@ -161,7 +173,7 @@ public class LinkedList implements List , Iterable<Integer>{
 	@Override
 	public Node get(int index) throws RuntimeException {
 		if(isEmpty())
-			throw new RuntimeException("Lista vazia");
+			throw new RuntimeException("Lista vazia...");
 		
 		Node node = head;
 		while(index > 0) {
@@ -250,10 +262,10 @@ public class LinkedList implements List , Iterable<Integer>{
 	}
 
 	@Override
-	public Iterator<Integer> iterator() {
+	public Iterator<Node> iterator() {
 		final LinkedList list = this;
 		
-		return new Iterator<Integer>() {
+		return new Iterator<Node>() {
 			final Node first = list.head;
 			Node current = null;
 			
@@ -265,19 +277,20 @@ public class LinkedList implements List , Iterable<Integer>{
 			}
 
 			@Override
-			public Integer next() {
+			public Node next() {
 				if(list.isEmpty())
 					throw new NoSuchElementException();
 				else if(current == null) {
 					this.current = first;
-					return current.value;
+					return current;
 				}
 				else if(current.next == null)
 					throw new NoSuchElementException();
 				
 				this.current = current.next;
-				return current.value;
+				return current;
 			}
+			
 			
 		};
 	}
