@@ -16,15 +16,15 @@ public class BubbleSortDead extends TheDadofSortings {
 	}
 
 	public void sort(LinkedList list) {
-
-		for (Iterator<Node> i = list.iterator(); i.hasNext();) {
+		
+		for(Iterator<Node> i = list.iterator(); i.hasNext();) {
 			Node value1 = i.next(), value2;
-			for (Iterator<Node> j = list.iterator(); j.hasNext();) {
-				value2 = j.next();
-				if(value1.compareTo(value2) > 0)
+			for(Iterator<Node> j = list.iterator(); j.hasNext();) {
+				if(value1.compareTo(value2 = j.next()) > 0)
 					list.swap(value1, value2);
 			}
 		}
+		
 	}
 
 }
