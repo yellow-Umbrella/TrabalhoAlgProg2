@@ -2,7 +2,7 @@ package sorting;
 
 //To-Do optimization
 
-public class BubbleSortOptimized extends TheDadofSortings{
+public class BubbleSortO extends TheDadofSortings{
 	
 	@Override
 	public void sort(int[] vet) {

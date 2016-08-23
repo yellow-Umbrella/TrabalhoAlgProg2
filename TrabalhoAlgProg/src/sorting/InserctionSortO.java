@@ -2,7 +2,7 @@ package sorting;
 
 //To-Do optimization
 
-public class InserctionSortOptimized extends TheDadofSortings {
+public class InserctionSortO extends TheDadofSortings {
 	
 	@Override
 	public void sort(int[] vet) {
