@@ -1,4 +1,4 @@
-package tests;
+package main;
 
 import java.io.IOException;
 
@@ -9,9 +9,9 @@ public class FileCreator {
 	public static void main(String[] args) throws IOException {
 		FileRandom file = new FileRandom();
 		
-		//ClassLoader.getSystemClassLoader().getResource(name)
+		file.writer("10.txt", 10);
 		
-		file.writer("1000.txt", 1000);
+		/*file.writer("1000.txt", 1000);
 		
 		file.writer("5000.txt", 5000);
 		
@@ -21,7 +21,7 @@ public class FileCreator {
 		
 		file.writer("50000.txt", 50000);
 		
-		file.writer("100000.txt", 100000);
+		file.writer("100000.txt", 100000);*/
 		
 	}
 

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Random;
 
 public class FileRandom {
+	private int posicao = 0;
 	
 	public LinkedList reader(String path) throws IOException {
 		LinkedList list = new LinkedList();
@@ -22,24 +23,28 @@ public class FileRandom {
 	
 	public void writer(String path, int length) throws IOException {
 		BufferedWriter out = new BufferedWriter(new FileWriter(path));
+		int[] vet = new int[length];
+		this.posicao = 0;
 		for (int i = 0; i < length; i++) {
-			out.write(notEqual(path));
+			out.write(notEqual(vet));
 			if (i != length-1)
 				out.newLine();
+			out.flush();
 		}
 		
 		out.close();
 	}
 	
-	private String notEqual(String path) throws IOException {
+	private String notEqual(int[] vet) throws IOException {
 		Random rand = new Random();
-		BufferedReader in = new BufferedReader(new FileReader(path));
-		String line, aux = rand.nextInt(Integer.MAX_VALUE) + "";
-		while ((line = in.readLine()) != null) { 
-			if (line.equals(aux))
-				notEqual(path);
+		int aux = rand.nextInt(10);//Integer.MAX_VALUE 
+		
+		for (int i = 0; i < posicao; i++) {
+			if(vet[i] == aux)
+				return notEqual(vet);
 		}
-		in.close();
-		return aux;
+		vet[posicao] = aux;
+		posicao++;
+		return aux + "";
 	}
 }
