@@ -1,6 +1,9 @@
 package sorting;
 
-public class SelectionSort extends TheDadofSortings {
+import util.LinkedList;
+import util.Node;
+
+public abstract class SelectionSort extends TheDadofSortings {
 
 	@Override
 	public void sort(int[] vet) {
@@ -15,6 +18,16 @@ public class SelectionSort extends TheDadofSortings {
 		}
 		
 	}
+	
+	public void sort(LinkedList list) {
+		
+		for(Node node = list.get(0); node != null; node = node.getNext()) {
+			
+		}
+		
+	}
+	
+	
 	
 
 }
