@@ -4,14 +4,14 @@ import java.io.IOException;
 
 import util.FileRandom;
 
-public class FileCreator {
+public class FileCreatorMain {
 
 	public static void main(String[] args) throws IOException {
 		FileRandom file = new FileRandom();
 		
-		file.writer("10.txt", 10);
+		// Cria os arquivos de (nome.txt, número de inteiros)
 		
-		/*file.writer("1000.txt", 1000);
+		file.writer("1000.txt", 1000);
 		
 		file.writer("5000.txt", 5000);
 		
@@ -21,7 +21,7 @@ public class FileCreator {
 		
 		file.writer("50000.txt", 50000);
 		
-		file.writer("100000.txt", 100000);*/
+		file.writer("100000.txt", 100000);
 		
 	}
 

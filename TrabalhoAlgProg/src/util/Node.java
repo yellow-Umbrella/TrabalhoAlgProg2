@@ -22,8 +22,7 @@ public class Node implements Comparable {
 	
 	
 	public String toString() {
-		String ret = "";
-		return ret + value;
+		return value + "";
 	}
 
 	@Override
