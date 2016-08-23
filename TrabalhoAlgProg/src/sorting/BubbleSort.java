@@ -5,7 +5,7 @@ import java.util.Iterator;
 import util.LinkedList;
 import util.Node;
 
-public class BubbleSortDead extends TheDadofSortings {
+public class BubbleSort extends TheDadofSortings {
 
 	@Override
 	public void sort(int[] vet) {

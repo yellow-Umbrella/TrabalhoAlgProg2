@@ -1,6 +1,6 @@
 package tests;
 
-import sorting.BubbleSortDead;
+import sorting.BubbleSort;
 import util.LinkedList;
 import util.Node;
 

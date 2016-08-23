@@ -1,15 +1,7 @@
 package main;
 
 import java.io.IOException;
-
-import linkedSort.BubbleSort;
-import linkedSort.BubbleSortO;
-import linkedSort.BucketSort;
-import linkedSort.InserctionSort;
-import linkedSort.InserctionSortO;
-import linkedSort.MergeSort;
-import linkedSort.QuickSort;
-import linkedSort.SelectionSort;
+import sorting.BubbleSort;
 import util.FileRandom;
 import util.LinkedList;
 

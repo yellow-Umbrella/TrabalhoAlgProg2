@@ -41,7 +41,7 @@ public class FileRandom {
 	// Valida o valor antes de ser escrito no arquivo
 	private String notEqual(int[] vet) throws IOException { // recebe o vetor com os demais valores do arquivo
 		Random rand = new Random();
-		int aux = rand.nextInt(Integer.MAX_VALUE); // variável recebe um valor randômico inteiro de 0 a MAX_VALUE
+		int aux = rand.nextInt(10);//Integer.MAX_VALUE); // variável recebe um valor randômico inteiro de 0 a MAX_VALUE
 		
 		for (int i = 0; i < posicao; i++) { // percorre o vetor
 			if(vet[i] == aux) // se valor já existe no vetor, chama notEqual novamente
