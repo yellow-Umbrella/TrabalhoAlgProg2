@@ -17,11 +17,15 @@ public class BubbleSort extends TheDadofSortings {
 
 	public void sort(LinkedList list) {
 		
-		for(Iterator<Node> i = list.iterator(); i.hasNext();) {
-			Node value1 = i.next(), value2;
+		for(int i = 0; i < list.size(); i++) {
+			Node value1 = null, value2 = null;
 			for(Iterator<Node> j = list.iterator(); j.hasNext();) {
+				if(value1 == null)
+					value1 = j.next();
+				else
+					value1 = value2;
 				value2 = j.next();
-				if(value2.compareTo(value1) > 0)
+				if(value1.compareTo(value2) > 0)
 					list.swap(value1, value2);
 			}
 		}
