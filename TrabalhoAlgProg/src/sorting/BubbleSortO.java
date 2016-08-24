@@ -10,7 +10,7 @@ import util.Node;
 public class BubbleSortO {
 	
 	public void sort(LinkedList list) {
-		boolean sorted = true; // variável de otimização
+		boolean sorted = true; // variï¿½vel de otimizaï¿½ï¿½o
 		
 		for(int i = 0; i < list.size(); i++) {
 			Node value1 = null, value2 = null;
@@ -25,7 +25,7 @@ public class BubbleSortO {
 					sorted = false;
 				}
 			}
-			if(sorted) // verifica se já esta ordenado
+			if(sorted) // verifica se jï¿½ esta ordenado
 				break;
 		}
 	}

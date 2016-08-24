@@ -1,9 +1,10 @@
 package tests;
 
-import sorting.SelectionSort;
+import sorting.InserctionSort;
 import util.LinkedList;
 
-public class SelectionSortTest {
+public class InserctionSortTest {
+	
 	public static void main(String[] args) {
 		
 		int[] vet = {64, 25, 12, 22, 11};
@@ -11,7 +12,7 @@ public class SelectionSortTest {
 		
 		System.out.println(list);
 		
-		new SelectionSort().sort(list);
+		new InserctionSort().sort(list);
 		
 		System.out.println(list);
 		

@@ -3,9 +3,9 @@ package sorting;
 import util.LinkedList;
 import util.Node;
 
-public abstract class SelectionSort {
+public class SelectionSort {
 
-	public static void sort(LinkedList list) {
+	public void sort(LinkedList list) {
 		Node min;
 		for(Node nodeWall = list.get(0); nodeWall != null; nodeWall = nodeWall.getNext()) {
 			min = nodeWall;

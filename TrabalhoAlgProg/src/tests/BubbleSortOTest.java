@@ -1,9 +1,9 @@
 package tests;
 
-import sorting.SelectionSort;
+import sorting.BubbleSortO;
 import util.LinkedList;
 
-public class SelectionSortTest {
+public class BubbleSortOTest {
 	public static void main(String[] args) {
 		
 		int[] vet = {64, 25, 12, 22, 11};
@@ -11,9 +11,10 @@ public class SelectionSortTest {
 		
 		System.out.println(list);
 		
-		new SelectionSort().sort(list);
+		new BubbleSortO().sort(list);
 		
 		System.out.println(list);
+		
 		
 	}
 
