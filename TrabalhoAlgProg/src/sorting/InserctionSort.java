@@ -1,19 +1,20 @@
 package sorting;
 
-public class InserctionSort extends TheDadofSortings {
+import util.LinkedList;
+import util.Node;
 
-	@Override
-	public void sort(int[] vet) {
-		int j;
-		for(int i = 1; i < vet.length; i++) {
-			j = i;
-			while(j > 0 && vet[j-1] > vet[j]) {
-				swap(vet, j, j-1);
-				j = j-1;
+public class InserctionSort {
+
+	public void sort(LinkedList list) {
+		
+		for(Node nodeI = list.get(0); nodeI != null; nodeI = nodeI.getNext()) {
+			Node nodeJ = nodeI;
+			while(nodeJ.getPrev() != null && nodeJ.getPrev().getValue() > nodeJ.getValue()) {
+				list.swap(nodeJ, nodeJ.getPrev());
+				nodeJ = nodeJ.getPrev();
 			}
-			
 		}
 		
 	}
-
+	
 }
