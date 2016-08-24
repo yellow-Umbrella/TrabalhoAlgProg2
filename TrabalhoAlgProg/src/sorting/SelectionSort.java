@@ -5,23 +5,18 @@ import util.Node;
 
 public abstract class SelectionSort {
 
-	public void sort(int[] vet) { // remover
-		
-		for(int i = 0; i < vet.length-1; i++) {
-			int min = i;
-			for(int j = i+1; j < vet.length; j++)
-				if(vet[j] < vet[min])
-					min = j;
-			//if(min != i)
-				//swap(vet, i, min);
-		}
-		
-	}
-	
-	public void sort(LinkedList list) {
-		
-		for(Node node = list.get(0); node != null; node = node.getNext()) {
+	public static void sort(LinkedList list) {
+		Node min;
+		for(Node nodeWall = list.get(0); nodeWall != null; nodeWall = nodeWall.getNext()) {
+			min = nodeWall;
+			for(Node node = nodeWall; node != null; node = node.getNext()) {
+				if(node.compareTo(min) < 1)
+					min = node;
+				
+			}
 			
+			if(min != nodeWall)
+				list.swap(min, nodeWall);
 		}
 		
 	}

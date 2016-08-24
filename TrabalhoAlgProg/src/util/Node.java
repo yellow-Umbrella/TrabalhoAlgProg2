@@ -47,26 +47,10 @@ public class Node implements Comparable {
 				return 1;
 			else if(this.value < node.value)
 				return -1;
+			else 
+				return 0;
 		}
 		return 0;
 	}
 
 }
-
-
-/*
- * class Node {
-	 
-	 protected int value;
-	 protected Node next, prev;
-	 
-	 public Node() {}
-	 
-	 public Node(int value) {
-		 this.value = value;
-	 }
-	 
- }
- * 
- * 
-*/
