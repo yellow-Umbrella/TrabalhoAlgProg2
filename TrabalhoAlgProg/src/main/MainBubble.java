@@ -9,78 +9,67 @@ public class MainBubble {
 	public static void main(String[] args) throws IOException {
 		FileRandom file = new FileRandom();
 		BubbleSort bubble = new BubbleSort();
-		long[][] time = new long[6][2];
-		Long time1, time2;
-
+		Long time1, time2, trocas;
 		////////////////////////////////////////////////////////////
 		LinkedList list0 = file.reader("1000.txt");
 
 		time1 = System.nanoTime();
-		bubble.sort(list0);
+		trocas = bubble.sort(list0);
 		time2 = System.nanoTime();
-
-		time[0][0] = 1000; // Tamanho do vetor
-		time[0][1] = (time2 - time1); // Tempo de ordenação
-		// TODO arquivar lista ordenada e printar
+		
+		System.out.println("  1.000 - Tempo: " + (time2 - time1) + " Trocas: " + trocas);
+		//System.out.println(list0);
 
 		////////////////////////////////////////////////////////////
 		LinkedList list1 = file.reader("5000.txt");
 
 		time1 = System.nanoTime();
-		bubble.sort(list1);
+		trocas = bubble.sort(list1);
 		time2 = System.nanoTime();
 
-		time[1][0] = 5000; // Tamanho do vetor
-		time[1][1] = (time2 - time1); // Tempo de ordenação
-		// TODO arquivar lista ordenada e printar
+		System.out.println("  5.000 - Tempo: " + (time2 - time1) + " Trocas: " + trocas);
+		//System.out.println(list1);
 
 		////////////////////////////////////////////////////////////
 		LinkedList list2 = file.reader("10000.txt");
 
 		time1 = System.nanoTime();
-		bubble.sort(list2);
+		trocas = bubble.sort(list2);
 		time2 = System.nanoTime();
 
-		time[2][0] = 10000; // Tamanho do vetor
-		time[2][1] = (time2 - time1); // Tempo de ordenação
-		// TODO arquivar lista ordenada e printar
+		System.out.println(" 10.000 - Tempo: " + (time2 - time1) + " Trocas: " + trocas);
+		//System.out.println(list2);
 
 		////////////////////////////////////////////////////////////
 		LinkedList list3 = file.reader("20000.txt");
 
 		time1 = System.nanoTime();
-		bubble.sort(list3);
+		trocas = bubble.sort(list3);
 		time2 = System.nanoTime();
 
-		time[3][0] = 20000; // Tamanho do vetor
-		time[3][1] = (time2 - time1); // Tempo de ordenação
-		// TODO arquivar lista ordenada e printar
+		System.out.println(" 20.000 - Tempo: " + (time2 - time1) + " Trocas: " + trocas);
+		//System.out.println(list3);
 
 		////////////////////////////////////////////////////////////
 		LinkedList list4 = file.reader("50000.txt");
 
 		time1 = System.nanoTime();
-		bubble.sort(list4);
+		trocas = bubble.sort(list4);
 		time2 = System.nanoTime();
 
-		time[4][0] = 50000; // Tamanho do vetor
-		time[4][1] = (time2 - time1); // Tempo de ordenação
-		// TODO arquivar lista ordenada e printar
+		System.out.println(" 50.000 - Tempo: " + (time2 - time1) + " Trocas: " + trocas);
+		//System.out.println(list4);
 
 		////////////////////////////////////////////////////////////
 		LinkedList list5 = file.reader("100000.txt");
 
 		time1 = System.nanoTime();
-		bubble.sort(list5);
+		trocas = bubble.sort(list5);
 		time2 = System.nanoTime();
 
-		time[5][0] = 100000; // Tamanho do vetor
-		time[5][1] = (time2 - time1); // Tempo de ordenação
-		// TODO arquivar lista ordenada e printar
+		System.out.println("100.000 - Tempo: " + (time2 - time1) + " Trocas: " + trocas);
+		//System.out.println(list5);
 		
-		for (int i = 0; i < time.length; i++) {
-			System.out.println(time[i][0] + " - " + time[i][1]);
-		}
 	}
 
 }

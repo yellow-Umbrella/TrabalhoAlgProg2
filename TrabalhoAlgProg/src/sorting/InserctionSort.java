@@ -5,8 +5,8 @@ import util.Node;
 
 public class InserctionSort {
 
-	public int sort(LinkedList list) {
-		int swap = 0;
+	public long sort(LinkedList list) {
+		long swap = 0;
 		
 		for(Node nodeI = list.get(0); nodeI != null; nodeI = nodeI.getNext()) {
 			Node nodeJ = nodeI;

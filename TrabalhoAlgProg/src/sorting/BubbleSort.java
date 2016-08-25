@@ -7,8 +7,8 @@ import util.Node;
 
 public class BubbleSort {
 
-	public int sort(LinkedList list) {
-		int swap = 0;
+	public long sort(LinkedList list) {
+		long swap = 0;
 		
 		for(int i = 0; i < list.size(); i++) {
 			Node value1 = null, value2 = null;

@@ -5,8 +5,8 @@ import util.Node;
 
 public class InserctionSortO {
 	
-	public int sort(LinkedList list) {
-		int swap = 0;
+	public long sort(LinkedList list) {
+		long swap = 0;
 		
 		return swap;
 	}

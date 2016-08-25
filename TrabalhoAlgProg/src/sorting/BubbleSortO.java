@@ -6,8 +6,8 @@ import util.Node;
 
 public class BubbleSortO {
 	
-	public int sort(LinkedList list) {
-		int swap = 0;
+	public long sort(LinkedList list) {
+		long swap = 0;
 		boolean sorted = true; // variavel de otimizacao
 		
 		for(int i = 0; i < list.size(); i++) {
