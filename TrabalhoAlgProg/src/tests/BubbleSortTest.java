@@ -3,7 +3,7 @@ package tests;
 import java.io.IOException;
 import java.util.Scanner;
 
-import sorting.InserctionSort;
+import sorting.InsertionSort;
 import util.FileRandom;
 import util.LinkedList;
 import util.Search;
@@ -19,7 +19,7 @@ public class BubbleSortTest {
 		//BubbleSort bubble = new BubbleSort();
 		//BubbleSortO bubbleO = new BubbleSortO();
 		System.out.println(list);
-		InserctionSort inserction = new InserctionSort();
+		InsertionSort inserction = new InsertionSort();
 		inserction.sort(list);
 		//bubble.sort(list);
 		//bubbleO.sort(list);

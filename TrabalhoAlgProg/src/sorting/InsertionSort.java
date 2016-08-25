@@ -3,7 +3,7 @@ package sorting;
 import util.LinkedList;
 import util.Node;
 
-public class InserctionSort {
+public class InsertionSort {
 
 	public long[] sort(LinkedList list) {
 		long[] swapComp = {0, 0};

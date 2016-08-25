@@ -1,12 +1,11 @@
 package toDo;
+
 import util.LinkedList;
 
-public class InserctionSortO {
+public class InsertionSortO {
 	
 	public long[] sort(LinkedList list) {
-		long[] swapComp = {0, 0};
-		
-		return swapComp;
+		return null;
 	}
 
 }

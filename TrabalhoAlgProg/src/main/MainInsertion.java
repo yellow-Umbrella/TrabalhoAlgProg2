@@ -2,15 +2,15 @@ package main;
 
 import java.io.IOException;
 
-import sorting.InserctionSort;
+import sorting.InsertionSort;
 import util.FileRandom;
 import util.LinkedList;
 
-public class MainInserction {
+public class MainInsertion {
 
 	public static void main(String[] args) throws IOException {
 		FileRandom file = new FileRandom();
-		InserctionSort inserction = new InserctionSort();
+		InsertionSort inserction = new InsertionSort();
 		long time1, time2;
 		long[] swapComp;
 		////////////////////////////////////////////////////////////

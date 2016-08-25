@@ -1,6 +1,6 @@
 package tests;
 
-import sorting.InserctionSort;
+import sorting.InsertionSort;
 import util.LinkedList;
 
 public class InserctionSortTest {
@@ -12,7 +12,7 @@ public class InserctionSortTest {
 		
 		System.out.println(list);
 		
-		new InserctionSort().sort(list);
+		new InsertionSort().sort(list);
 		
 		System.out.println(list);
 		
