@@ -5,7 +5,9 @@ import util.Node;
 
 public class CocktailSort {
 	
-	public void sort(LinkedList list) {
+	long swapComp[] = {0, 0};
+	
+	public long[] sort(LinkedList list) {
 		
 		int i;
 		Node node, aux;
@@ -18,7 +20,9 @@ public class CocktailSort {
 			node = list.get(0);
 			
 			while(i++ < (n-1)) {
+				swapComp[1]++;
 				if(node.compareTo(node.getNext()) > 0) {
+					swapComp[0]++;
 					saida = true;
 					list.swap(node, node.getNext());
 				}
@@ -33,16 +37,19 @@ public class CocktailSort {
 			
 			aux = list.getTail();
 			while(i-- >= 0) {
-				if(aux.compareTo(aux.getPrev()) > 0) {
-					saida = false;
+				swapComp[1]++;
+				if(aux.compareTo(aux.getPrev()) <= 0) {
+					swapComp[0]++;
+					saida = true;
 					list.swap(aux, aux.getPrev());
 				}
 				
 				aux = aux.getPrev();
 			}
 			
-			
 		}
+		
+		return swapComp;
 		
 	}
 	

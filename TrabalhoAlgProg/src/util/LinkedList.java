@@ -20,8 +20,7 @@ public class LinkedList implements List , Iterable<Node>{
 	 */
 	public LinkedList(int vet[]) {
 		first(new Node(vet[0]));
-		size++;
-		for(int i = 1; i < vet.length; i++, size++)
+		for(int i = 1; i < vet.length; i++)
 			add(vet[i]);
 	}
 
