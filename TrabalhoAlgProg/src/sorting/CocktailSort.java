@@ -1,43 +1,56 @@
 package sorting;
 
+import util.LinkedList;
+import util.Node;
+
 public class CocktailSort {
-
-	public int[] doSort(int vet[]) {
-		int i, aux;
-		int n = vet.length;
+	
+	long swapComp[] = {0, 0};
+	
+	public long[] sort(LinkedList list) {
+		
+		int i;
+		Node node, aux;
+		int n = list.size();
 		boolean saida = true;
-		while (saida) {
+		
+		while(saida) {
 			saida = false;
-			i = 0; // n-1 pois vamos comparar 1 valor com os demais (n-1)
-					// valores
-			while (i < (n - 1)) {
-				if (vet[i] > vet[i + 1]) { // Compara com o pr�ximo
-					saida = true; // fez uma troca
-					aux = vet[i];
-					vet[i] = vet[i + 1];
-					vet[i + 1] = aux;
+			i = 0;
+			node = list.get(0);
+			
+			while(i++ < (n-1)) {
+				swapComp[1]++;
+				if(node.compareTo(node.getNext()) > 0) {
+					swapComp[0]++;
+					saida = true;
+					list.swap(node, node.getNext());
 				}
-				i++;
+				
+				node = node.getNext();
 			}
-			if (!saida)
-				break; // se n�o fez troca, encerra o c�digo
-			saida = false;
-			i = (n - 2);
-			while (i >= 0) {
-				if (vet[i] > vet[i + 1]) { //
-					saida = true; //
-					aux = vet[i];
-					vet[i] = vet[i + 1];
-					vet[i + 1] = aux;
+			
+			if(!saida)
+				break;
+			saida =false;
+			i = (n-2);
+			
+			aux = list.getTail();
+			while(i-- >= 0) {
+				swapComp[1]++;
+				if(aux.compareTo(aux.getPrev()) <= 0) {
+					swapComp[0]++;
+					saida = true;
+					list.swap(aux, aux.getPrev());
 				}
-				i--;
+				
+				aux = aux.getPrev();
 			}
+			
 		}
-
-		return vet;
-
+		
+		return swapComp;
+		
 	}
-	
-	
 	
 }

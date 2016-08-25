@@ -1,6 +1,6 @@
 package tests;
 
-import toDo.CocktailSort;
+import sorting.CocktailSort;
 import util.LinkedList;
 
 public class CocktailSortTest {
