@@ -1,6 +1,6 @@
-package main;
+package toDo;
 
-public class MainBucket {
+public class MainMerge {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

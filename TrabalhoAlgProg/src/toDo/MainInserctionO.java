@@ -1,6 +1,6 @@
-package main;
+package toDo;
 
-public class MainInserction {
+public class MainInserctionO {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

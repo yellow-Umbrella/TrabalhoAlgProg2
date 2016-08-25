@@ -1,6 +1,6 @@
-package main;
+package toDo;
 
-public class MainMerge {
+public class MainSelection {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

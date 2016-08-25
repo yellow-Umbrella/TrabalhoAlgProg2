@@ -1,7 +1,5 @@
-package sorting;
-
+package toDo;
 import util.LinkedList;
-import util.Node;
 
 public class InserctionSortO {
 	

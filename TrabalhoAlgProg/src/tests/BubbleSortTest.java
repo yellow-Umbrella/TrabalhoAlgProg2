@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import sorting.InserctionSort;
-import util.Search;
 import util.FileRandom;
 import util.LinkedList;
+import util.Search;
 
 public class BubbleSortTest {
 	
