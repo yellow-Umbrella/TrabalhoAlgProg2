@@ -191,6 +191,14 @@ public class LinkedList implements List , Iterable<Node>{
 	}
 	
 	/**
+	 * Retorna o final (tail) da lista.
+	 * @return
+	 */
+	public Node getTail() {
+		return tail;
+	}
+	
+	/**
 	 * Retorna o valor do noh na posicao index.
 	 * @param index da posicao desejada
 	 * @return Valor que esta no noh do index.
