@@ -9,8 +9,7 @@ import java.util.Random;
 
 public class FileRandom {
 	
-	// Lê um arquivo e adiciona os elementos à lista
-	public LinkedList reader(String path) throws IOException { // recebe (endereço.txt)
+	public LinkedList reader(String path) throws IOException {
 		LinkedList list = new LinkedList();
         BufferedReader in = new BufferedReader(new FileReader(path));
         String line;
@@ -21,36 +20,67 @@ public class FileRandom {
         return list;
     }
 	
-	// Escreve em um arquivo inteiros não repetidos
-	public void writer(String path, int length) throws IOException { // recebe (endeço.txt, número de inteiros)
+
+	public void writer(String path, int length) throws IOException {
 		BufferedWriter out = new BufferedWriter(new FileWriter(path));
 		int[] vet = contains(length);
 		
 		for (int i = 0; i < length; i++) {
-			out.write(vet[i] + ""); // adicina no arquivo o valor criado pelo método notEqual
+			out.write(vet[i] + "");
 			if (i != length - 1)
-				out.newLine(); // adiciona quebra de linha no arquivo
+				out.newLine();
 			out.flush();
 		}
 		
 		out.close();
 	}
-	
-	// Valida o valor antes de ser escrito no arquivo
-	private int[] contains(int length) throws IOException { // recebe o vetor com os demais valores do arquivo
+
+	private int[] contains(int length) throws IOException {
 		Random rand = new Random();
-		int aux; // variável recebe um valor randômico inteiro de 0 a length
+		int aux;
 		int[] vetN = new int[length];
 		int auxLength = length*5;
-		boolean[] vet = new boolean[auxLength];
+		boolean[] vetB = new boolean[auxLength];
 		
 		for (int i = 0; i < length; i++) {
 			do {
 				aux = rand.nextInt(auxLength-1);
-			} while(vet[aux]);
-			vet[aux] = true; // marca variavel no vetor auxiliar
-			vetN[i] = aux; // adiciona variável
+			} while(vetB[aux]);
+			vetB[aux] = true;
+			vetN[i] = aux; 
 		}
-		return vetN; // retorna variável no farmato de String
+		return vetN;
 	}
+	
+			public void writer100(String pathOut, String pathIn) throws IOException {
+				BufferedWriter out = new BufferedWriter(new FileWriter(pathOut));
+				int[] vet = contains100(reader(pathIn));
+				
+				for (int i = 0; i < vet.length; i++) {
+					out.write(vet[i] + ""); 
+					if (i != vet.length-1)
+						out.newLine();
+					out.flush();
+				}
+				
+				out.close();
+			}
+	
+		private int[] contains100(LinkedList list) throws IOException { 
+			Random rand = new Random();
+			Search search = new Search();
+			int aux;
+			int[] vetN = new int[100];
+			int auxLength = list.size()*5;
+			boolean[] vetB = new boolean[auxLength];
+			
+			for (int i = 0; i < vetN.length; i++) {
+				do {
+					aux = rand.nextInt(auxLength-1);
+				} while(vetB[aux] || !search.sequential(list, aux));
+				vetB[aux] = true;
+				vetN[i] = aux;
+			}
+			return vetN;
+		}
 }
