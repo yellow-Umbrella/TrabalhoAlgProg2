@@ -142,6 +142,12 @@ public class LinkedList implements List , Iterable<Node>{
 		
 	}
 	
+	/**
+	 * Troca os valores dos nodes.
+	 * @param n1
+	 * @param n2
+	 * @throws RuntimeException
+	 */
 	public void swap(Node n1, Node n2) throws RuntimeException {
 		if(isEmpty())
 			throw new RuntimeException("Lista vazia...");
