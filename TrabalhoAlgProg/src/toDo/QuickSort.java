@@ -9,8 +9,10 @@ public class QuickSort {
 		
 	}
 	
-	public void sort(LinkedList list, Node init, Node end) {
+	public long[] sort(LinkedList list) {
+		long[] swapComp = {0, 0};
 		
+		return swapComp;
 	}
 
 }

@@ -9,10 +9,10 @@ public class MergeSort {
 		
 	}
 	
-	public void sort(LinkedList list, Node start, Node end) {
-		if(start != null && end != null && start.getValue() != end.getValue()) {
-			
-		}
+	public long[] sort(LinkedList list) {
+		long[] swapComp = {0, 0};
+		
+		return swapComp;
 	}
 	
 }

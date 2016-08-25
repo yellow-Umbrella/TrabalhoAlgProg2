@@ -2,6 +2,7 @@ package main;
 
 import java.io.IOException;
 import java.util.Scanner;
+
 import util.FileRandom;
 
 public class FileCreatorMain {
