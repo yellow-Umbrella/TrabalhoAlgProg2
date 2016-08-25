@@ -41,7 +41,7 @@ public class FileRandom {
 		Random rand = new Random();
 		int aux; // variável recebe um valor randômico inteiro de 0 a length
 		int[] vetN = new int[length];
-		int auxLength = length*10;
+		int auxLength = length*5;
 		boolean[] vet = new boolean[auxLength];
 		
 		for (int i = 0; i < length; i++) {
