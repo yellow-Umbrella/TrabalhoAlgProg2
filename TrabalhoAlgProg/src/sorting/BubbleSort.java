@@ -7,7 +7,8 @@ import util.Node;
 
 public class BubbleSort {
 
-	public void sort(LinkedList list) {
+	public int sort(LinkedList list) {
+		int swap = 0;
 		
 		for(int i = 0; i < list.size(); i++) {
 			Node value1 = null, value2 = null;
@@ -17,11 +18,13 @@ public class BubbleSort {
 				else
 					value1 = value2;
 				value2 = j.next();
-				if(value1.compareTo(value2) > 0)
+				if(value1.compareTo(value2) > 0) {
 					list.swap(value1, value2);
+					swap++;
+				}
 			}
 		}
-		
+		return swap;
 	}
 
 }

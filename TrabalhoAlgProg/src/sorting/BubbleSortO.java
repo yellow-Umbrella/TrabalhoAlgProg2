@@ -1,16 +1,14 @@
 package sorting;
 
 import java.util.Iterator;
-
 import util.LinkedList;
 import util.Node;
 
-//To-Do optimization
-
 public class BubbleSortO {
 	
-	public void sort(LinkedList list) {
-		boolean sorted = true; // vari�vel de otimiza��o
+	public int sort(LinkedList list) {
+		int swap = 0;
+		boolean sorted = true; // variavel de otimizacao
 		
 		for(int i = 0; i < list.size(); i++) {
 			Node value1 = null, value2 = null;
@@ -22,12 +20,14 @@ public class BubbleSortO {
 				value2 = j.next();
 				if(value1.compareTo(value2) > 0) {
 					list.swap(value1, value2);
+					swap++;
 					sorted = false;
 				}
 			}
-			if(sorted) // verifica se j� esta ordenado
+			if(sorted) // verifica se ja esta ordenado
 				break;
 		}
+		return swap;
 	}
 
 }

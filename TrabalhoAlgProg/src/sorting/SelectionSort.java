@@ -5,7 +5,8 @@ import util.Node;
 
 public class SelectionSort {
 
-	public void sort(LinkedList list) {
+	public int sort(LinkedList list) {
+		int swap = 0;
 		Node min;
 		for(Node nodeWall = list.get(0); nodeWall != null; nodeWall = nodeWall.getNext()) {
 			min = nodeWall;
@@ -15,10 +16,12 @@ public class SelectionSort {
 				
 			}
 			
-			if(min != nodeWall)
+			if(min != nodeWall) {
 				list.swap(min, nodeWall);
+				swap++;
+			}
 		}
-		
+		return swap;
 	}
 	
 	

@@ -5,8 +5,10 @@ import util.Node;
 
 public class InserctionSortO {
 	
-	public void sort(LinkedList list) {
+	public int sort(LinkedList list) {
+		int swap = 0;
 		
+		return swap;
 	}
 
 }
