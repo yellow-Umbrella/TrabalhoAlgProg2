@@ -24,12 +24,11 @@ public class FileRandom {
 	// Escreve em um arquivo inteiros não repetidos
 	public void writer(String path, int length) throws IOException { // recebe (endeço.txt, número de inteiros)
 		BufferedWriter out = new BufferedWriter(new FileWriter(path));
-		length *= 10;
-		boolean[] vet = new boolean[length]; // vetor para verificação de repetições
+		int[] vet = contains(length);
 		
 		for (int i = 0; i < length; i++) {
-			out.write(contains(vet, length)); // adicina no arquivo o valor criado pelo método notEqual
-			if (i != length-1)
+			out.write(vet[i] + ""); // adicina no arquivo o valor criado pelo método notEqual
+			if (i != length - 1)
 				out.newLine(); // adiciona quebra de linha no arquivo
 			out.flush();
 		}
@@ -38,13 +37,20 @@ public class FileRandom {
 	}
 	
 	// Valida o valor antes de ser escrito no arquivo
-	private String contains(boolean[] vet, int length) throws IOException { // recebe o vetor com os demais valores do arquivo
+	private int[] contains(int length) throws IOException { // recebe o vetor com os demais valores do arquivo
 		Random rand = new Random();
-		int aux = rand.nextInt(length-1); // variável recebe um valor randômico inteiro de 0 a length
-		if (vet[aux] == false)
-			vet[aux] = true; // adiciona variável
-		else
-			return contains(vet, length); // tenta outro número
-		return aux + ""; // retorna variável no farmato de String
+		int aux; // variável recebe um valor randômico inteiro de 0 a length
+		int[] vetN = new int[length];
+		int auxLength = length*10;
+		boolean[] vet = new boolean[auxLength];
+		
+		for (int i = 0; i < length; i++) {
+			do {
+				aux = rand.nextInt(auxLength-1);
+			} while(vet[aux]);
+			vet[aux] = true; // marca variavel no vetor auxiliar
+			vetN[i] = aux; // adiciona variável
+		}
+		return vetN; // retorna variável no farmato de String
 	}
 }
