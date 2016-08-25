@@ -3,10 +3,10 @@ import util.LinkedList;
 
 public class InserctionSortO {
 	
-	public long sort(LinkedList list) {
-		long swap = 0;
+	public long[] sort(LinkedList list) {
+		long[] swapComp = {0, 0};
 		
-		return swap;
+		return swapComp;
 	}
 
 }
