@@ -234,6 +234,20 @@ public class LinkedList implements List , Iterable<Node>{
 		size++;
 	}
 	
+	public void fixHeadTaill() {
+		
+		Node noh = this.head;
+		while(noh.prev != null)
+			noh = noh.prev;
+		this.head = noh;
+		
+		noh = this.tail;
+		while(noh.next != null)
+			noh = noh.next;
+		this.tail = noh;
+			
+	}
+	
 	/**
 	 * 
 	 * @param begin include 0
@@ -306,6 +320,10 @@ public class LinkedList implements List , Iterable<Node>{
 			
 			
 		};
+	}
+
+	public Node getHead() {
+		return head;
 	}
 
 }
