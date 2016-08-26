@@ -41,7 +41,7 @@ public class MergeSort {
 	private Node getMiddle(Node head) {
 		Node no1 = head;
 		Node no2 = head;
-		while(no1.getNext() != null && no2.getNext().getNext() != null) {
+		while(no1.getNext() != null && no2.getNext() != null && no2.getNext().getNext() != null) {
 			no1 = no1.getNext();
 			no2 = no2.getNext().getNext();
 		}
