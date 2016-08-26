@@ -21,6 +21,7 @@ public class Node implements Comparable {
 	
 	public void setNext(Node next) {
 		this.next = next;
+		next.prev = this;
 	}
 	
 	public Node getNext() {
@@ -29,6 +30,7 @@ public class Node implements Comparable {
 	
 	public void setPrev(Node prev) {
 		this.prev = prev;
+		prev.next = this;
 	}
 	
 	public Node getPrev() {

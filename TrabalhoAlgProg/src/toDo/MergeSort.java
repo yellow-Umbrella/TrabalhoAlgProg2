@@ -37,6 +37,8 @@ public class MergeSort {
 				head.setNext(middle);
 				middle.setPrev(head);
 			}
+			head = head.getNext();
+			middle = middle.getNext();
 		}
 	}
 	
