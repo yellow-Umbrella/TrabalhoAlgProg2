@@ -28,13 +28,15 @@ public class MergeSort {
 	}
 	
 	private void merge(Node head, Node middle) {
-		if(head.getValue() > middle.getValue()) {
-			middle.setNext(head);
-			head.setPrev(middle);
-		}
-		else {
-			head.setNext(middle);
-			middle.setPrev(head);
+		while(head != null && middle != null) {
+			if(head.getValue() > middle.getValue()) {
+				middle.setNext(head);
+				head.setPrev(middle);
+			}
+			else {
+				head.setNext(middle);
+				middle.setPrev(head);
+			}
 		}
 	}
 	
