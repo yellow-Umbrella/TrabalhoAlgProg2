@@ -11,7 +11,7 @@ public class InsertionSort {
 		for(Node nodeI = list.get(0); nodeI != null; nodeI = nodeI.getNext()) {
 			Node nodeJ = nodeI;
 			swapComp[1]++;
-			for(; nodeJ.getPrev() != null && nodeJ.getPrev().getValue() > nodeJ.getValue(); ) {
+			while(nodeJ.getPrev() != null && nodeJ.getPrev().getValue() > nodeJ.getValue()) {
 				list.swap(nodeJ, nodeJ.getPrev());
 				swapComp[0]++;
 				nodeJ = nodeJ.getPrev();
