@@ -2,7 +2,7 @@ package main;
 
 import java.io.IOException;
 
-import sorting.InsertionSortO;
+import toDo.InsertionSortO;
 import util.FileRandom;
 import util.LinkedList;
 
