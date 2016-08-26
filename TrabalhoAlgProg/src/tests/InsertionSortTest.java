@@ -7,7 +7,7 @@ import sorting.InsertionSortO;
 import util.FileRandom;
 import util.LinkedList;
 
-public class InserctionSortTest {
+public class InsertionSortTest {
 	
 	public static void main(String[] args) throws IOException {
 		FileRandom file = new FileRandom();
@@ -23,7 +23,7 @@ public class InserctionSortTest {
 		time2 = System.nanoTime();
 		
 		System.out.println("S/ O - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
-		//System.out.println(list0);
+		System.out.println(list0);
 
 		////////////////////////////////////////////////////////////
 		LinkedList list1 = file.reader("10.txt");
@@ -33,7 +33,7 @@ public class InserctionSortTest {
 		time2 = System.nanoTime();
 		
 		System.out.println("C/ O - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
-		//System.out.println(list0);
+		System.out.println(list1);
 	}
 
 }

@@ -14,6 +14,7 @@ public class InsertionSortO {
 			swapComp[1]++;
 			sorted = true;
 			while(nodeJ.getPrev() != null && nodeJ.getPrev().getValue() > nodeJ.getValue()) {
+				swapComp[1]++;
 				list.swap(nodeJ, nodeJ.getPrev());
 				swapComp[0]++;
 				nodeJ = nodeJ.getPrev();
