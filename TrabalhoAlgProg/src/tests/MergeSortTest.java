@@ -1,6 +1,6 @@
 package tests;
 
-import sorting.BubbleSortO;
+import main.MergeSort;
 import util.LinkedList;
 
 public class MergeSortTest {
@@ -9,12 +9,12 @@ public class MergeSortTest {
 		
 		int[] vet = {10, 9, 22248, 734, 36, 5, 4, 3, 2, 1, 0};
 		LinkedList list = new LinkedList(vet);
+		MergeSort merge = new MergeSort();
+		System.out.println(list.size() + " " + list.getHead() + " " + list.getTail() + "\n" + list);
 		
-		System.out.println(list);
+		merge.sort(list);
 		
-		new BubbleSortO().sort(list);
-		
-		System.out.println(list);
+		System.out.println(list.size() + " " + list.getHead() + " " + list.getTail() + "\n" + list);
 		
 	}
 

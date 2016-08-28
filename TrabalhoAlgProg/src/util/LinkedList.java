@@ -233,20 +233,7 @@ public class LinkedList implements List , Iterable<Node>{
 		this.tail = node;
 		size++;
 	}
-	
-	public void fixHeadTaill() {
-		
-		Node noh = this.head;
-		while(noh.prev != null)
-			noh = noh.prev;
-		this.head = noh;
-		
-		noh = this.tail;
-		while(noh.next != null)
-			noh = noh.next;
-		this.tail = noh;
-			
-	}
+
 	
 	/**
 	 * 
@@ -324,6 +311,17 @@ public class LinkedList implements List , Iterable<Node>{
 
 	public Node getHead() {
 		return head;
+	}
+
+	public void setHead(Node head) {
+		size = 1;
+		this.head = head;
+		Node no = head;
+		while(no.next != null) {
+			no = no.next;
+			size++;
+		}
+		tail = no;
 	}
 
 }
