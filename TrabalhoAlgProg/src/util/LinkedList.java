@@ -90,10 +90,6 @@ public class LinkedList implements List , Iterable<Node>{
 			throw new RuntimeException("IndexOutOfBoundsExceptionLOL");
 	}
 	
-	public void setHead(Node node) {
-		head = node;
-	}
-	
 	/**
 	 * Retira o noh correspondente ao index.
 	 * @param index da posicao a ser retirada.
@@ -318,14 +314,19 @@ public class LinkedList implements List , Iterable<Node>{
 	}
 
 	public void setHead(Node head) {
-		size = 1;
+		size = 0;
 		this.head = head;
 		Node no = head;
-		while(no.next != null) {
+		while(no != null) {
 			no = no.next;
 			size++;
 		}
 		tail = no;
+	}
+
+	public void fixHeadTaill() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
