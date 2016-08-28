@@ -2,6 +2,7 @@ package main;
 
 import java.io.IOException;
 
+import sorting.MergeSort;
 import util.FileRandom;
 import util.LinkedList;
 

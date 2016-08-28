@@ -1,6 +1,6 @@
 package tests;
 
-import main.MergeSort;
+import sorting.MergeSort;
 import util.LinkedList;
 
 public class MergeSortTest {
