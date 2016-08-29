@@ -1,4 +1,4 @@
-                         package sorting;
+package sorting;
 
 import util.LinkedList;
 import util.Node;
