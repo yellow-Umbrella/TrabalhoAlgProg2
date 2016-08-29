@@ -314,14 +314,21 @@ public class LinkedList implements List , Iterable<Node>{
 	}
 
 	public void setHead(Node head) {
-		size = 0;
-		this.head = head;
-		Node no = head;
-		while(no != null) {
-			no = no.next;
-			size++;
+		if(head == null) {
+			size = 0;
+			tail = null;
+			head = null;
 		}
-		tail = no;
+		else {
+			size = 1;
+			this.head = head;
+			Node no = head;
+			while(no.next != null) {
+				no = no.next;
+				size++;
+			}
+			tail = no;
+		}
 	}
 
 	public void fixHeadTaill() {
