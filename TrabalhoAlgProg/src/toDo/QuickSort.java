@@ -4,25 +4,51 @@ import util.LinkedList;
 import util.Node;
 
 public class QuickSort {
+	
+	long swapComp[] = {0, 0};
 
-	private Node partition(Node head, Node tail) {
-		return head;
+	public long sort(LinkedList list) {
+		quickSort(list, list.getHead(), list.getTail());
+		return 0;
 	}
 	
-	public long[] sort(LinkedList list) {
-		long[] swapComp = {0, 0};
+	private void quickSort(LinkedList list, Node left, Node right) {
 		
-		return swapComp;
-	}
-	
-	private void sort(Node head, Node tail) {
-		Node pivot = partition(head, tail);
-		Node pivotNext = pivot.getNext();
+		if(left != right) {
 		
-		if(head.getNext() != pivot)
-			sort(head, pivot);
-		if(pivotNext.getNext() != tail)
-			sort(pivotNext, pivotNext);
+			Node pivot = left;
+			
+			while(right != left) {
+			
+				if(pivot == left) {
+					if(!(pivot.compareTo(right) < 0)) {
+						list.swap(pivot, right);
+						pivot = right;
+					}
+					else {
+						right = right.getPrev();
+					}
+				}
+				
+				else if(pivot == right) {
+					if(!(pivot.compareTo(left) > 0)) {
+						list.swap(pivot, left);
+						pivot = left;
+					}
+					else {
+						left = left.getNext();
+					}
+				}
+				
+			}
+			
+			if(pivot.getPrev() != null)
+				quickSort(list, list.getHead(), pivot.getPrev());
+			
+			
+			quickSort(list, pivot.getNext(), list.getTail());
+		
+		}
 	}
 
 }
