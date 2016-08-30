@@ -5,11 +5,11 @@ import util.Node;
 
 public class QuickSort {
 	
-	long swapComp[] = {0, 0};
+	long[] swapComp = {0, 0};
 
-	public long sort(LinkedList list) {
+	public long[] sort(LinkedList list) {
 		quickSort(list, list.getHead(), list.getTail());
-		return 0;
+		return swapComp;
 	}
 	
 	private void quickSort(LinkedList list, Node left, Node right) {
