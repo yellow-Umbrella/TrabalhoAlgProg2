@@ -22,6 +22,7 @@ public class MergeSort {
 			middleNext = sort(middleNext);
 			
 			head = merge(head, middleNext);
+			swapComp[0]++;
 		}
 		return head;
 	}
@@ -29,6 +30,7 @@ public class MergeSort {
 	private Node merge(Node head, Node middle) {
 		LinkedList list = new LinkedList();
 		while(head != null || middle != null) {
+			swapComp[1]++;
 			if(head == null) {
 				list.add(middle.getValue());
 				middle = middle.getNext();
@@ -40,13 +42,10 @@ public class MergeSort {
 			else if(head.getValue() > middle.getValue()) {
 				list.add(middle.getValue());
 				middle = middle.getNext();
-				swapComp[1]++;
 			}
 			else {
 				list.add(head.getValue());
 				head = head.getNext();
-				swapComp[0]++;
-				swapComp[1]++;
 			}
 		}
 		return list.getHead();
