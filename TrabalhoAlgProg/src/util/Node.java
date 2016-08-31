@@ -1,6 +1,6 @@
 package util;
 
-public class Node implements Comparable {
+public class Node implements Comparable<Object> {
 	
 	protected int value;
 	protected Node next, prev;
@@ -9,6 +9,12 @@ public class Node implements Comparable {
 	
 	public Node(int value) {
 		this.value = value;
+	}
+	
+	public Node(Node node) {
+		this.value = node.value;
+		this.next = node.next;
+		this.prev = node.prev;
 	}
 	
 	public void setValue(int value) {
@@ -41,6 +47,16 @@ public class Node implements Comparable {
 	
 	public String toString() {
 		return value + "";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Node) {
+			Node node = (Node) obj;
+			if(this.value == node.value)
+				return true;
+		}
+		return false;
 	}
 
 	@Override
