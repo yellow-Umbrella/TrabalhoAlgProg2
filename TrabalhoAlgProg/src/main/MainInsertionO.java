@@ -3,23 +3,25 @@ package main;
 import java.io.IOException;
 
 import toDo.InsertionSortO;
+import toDo.TestaOrdenacao;
 import util.FileRandom;
 import util.LinkedList;
 
 public class MainInsertionO {
 
 	public static void main(String[] args) throws IOException {
+		TestaOrdenacao test = new TestaOrdenacao();
 		FileRandom file = new FileRandom();
-		InsertionSortO insertion = new InsertionSortO();
+		InsertionSortO inserction = new InsertionSortO();
 		long time1, time2;
 		long[] swapComp;
 		////////////////////////////////////////////////////////////
 		LinkedList list0 = file.reader("1000.txt");
 
 		time1 = System.nanoTime();
-		swapComp = insertion.sort(list0);
+		swapComp = inserction.sort(list0);
 		time2 = System.nanoTime();
-		
+		test.testar(list0);
 		System.out.println("  1.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list0);
 
@@ -27,9 +29,9 @@ public class MainInsertionO {
 		LinkedList list1 = file.reader("5000.txt");
 
 		time1 = System.nanoTime();
-		swapComp = insertion.sort(list1);
+		swapComp = inserction.sort(list1);
 		time2 = System.nanoTime();
-
+		test.testar(list1);
 		System.out.println("  5.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list1);
 
@@ -37,9 +39,9 @@ public class MainInsertionO {
 		LinkedList list2 = file.reader("10000.txt");
 
 		time1 = System.nanoTime();
-		swapComp = insertion.sort(list2);
+		swapComp = inserction.sort(list2);
 		time2 = System.nanoTime();
-
+		test.testar(list2);
 		System.out.println(" 10.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list2);
 
@@ -47,9 +49,9 @@ public class MainInsertionO {
 		LinkedList list3 = file.reader("20000.txt");
 
 		time1 = System.nanoTime();
-		swapComp = insertion.sort(list3);
+		swapComp = inserction.sort(list3);
 		time2 = System.nanoTime();
-
+		test.testar(list3);
 		System.out.println(" 20.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list3);
 
@@ -57,9 +59,9 @@ public class MainInsertionO {
 		LinkedList list4 = file.reader("50000.txt");
 
 		time1 = System.nanoTime();
-		swapComp = insertion.sort(list4);
+		swapComp = inserction.sort(list4);
 		time2 = System.nanoTime();
-
+		test.testar(list4);
 		System.out.println(" 50.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list4);
 
@@ -67,9 +69,9 @@ public class MainInsertionO {
 		LinkedList list5 = file.reader("100000.txt");
 
 		time1 = System.nanoTime();
-		swapComp = insertion.sort(list5);
+		swapComp = inserction.sort(list5);
 		time2 = System.nanoTime();
-
+		test.testar(list5);
 		System.out.println("100.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list5);
 		
