@@ -8,7 +8,12 @@ import java.io.IOException;
 import java.util.Random;
 
 public class FileRandom {
-	
+	/**
+	 * Preenche a lista com os valores do arquivo
+	 * @param path
+	 * @return
+	 * @throws IOException
+	 */
 	public LinkedList reader(String path) throws IOException {
 		LinkedList list = new LinkedList();
         BufferedReader in = new BufferedReader(new FileReader(path));
@@ -20,7 +25,12 @@ public class FileRandom {
         return list;
     }
 	
-
+	/**
+	 * Escreve no arquivo a quantidade de números dada pelo usuário
+	 * @param path
+	 * @param length
+	 * @throws IOException
+	 */
 	public void writer(String path, int length) throws IOException {
 		BufferedWriter out = new BufferedWriter(new FileWriter(path));
 		int[] vet = contains(length);
@@ -34,7 +44,12 @@ public class FileRandom {
 		
 		out.close();
 	}
-
+	/**
+	 * Cria um vetor com inteiros não repetidos gerados aleatóriamente
+	 * @param length
+	 * @return
+	 * @throws IOException
+	 */
 	private int[] contains(int length) throws IOException {
 		Random rand = new Random();
 		int aux;
@@ -51,21 +66,31 @@ public class FileRandom {
 		}
 		return vetN;
 	}
-	
-			public void writer100(String pathOut, String pathIn) throws IOException {
-				BufferedWriter out = new BufferedWriter(new FileWriter(pathOut));
-				int[] vet = contains100(reader(pathIn));
-				
-				for (int i = 0; i < vet.length; i++) {
-					out.write(vet[i] + ""); 
-					if (i != vet.length-1)
-						out.newLine();
-					out.flush();
-				}
-				
-				out.close();
+		/**
+		 * Escreve no arquivo de saída, 100 valores retirados do arquivo de entrada aleatóriamente
+		 * @param pathOut
+		 * @param pathIn
+		 * @throws IOException
+		 */
+		public void writer100(String pathOut, String pathIn) throws IOException {
+			BufferedWriter out = new BufferedWriter(new FileWriter(pathOut));
+			int[] vet = contains100(reader(pathIn));
+			
+			for (int i = 0; i < vet.length; i++) {
+				out.write(vet[i] + ""); 
+				if (i != vet.length-1)
+					out.newLine();
+				out.flush();
 			}
-	
+		
+			out.close();
+		}
+		/**
+		 * Cria um vetor com inteiros não repetidos gerados aleatóriamente a partir dos valores da lista dada
+		 * @param list
+		 * @return
+		 * @throws IOException
+		 */
 		private int[] contains100(LinkedList list) throws IOException { 
 			Random rand = new Random();
 			Search search = new Search();
