@@ -4,13 +4,23 @@ import util.LinkedList;
 import util.Node;
 
 public class MergeSort {
-	long[] swapComp = {0, 0};
+	long[] swapComp = {0, 0}; //Contador de swaps e comparações.
 	
+	/**
+	 * Método que ordena a lista pelo MergeSort.
+	 * @param list
+	 * @return
+	 */
 	public long[] sort(LinkedList list) {
 		list.setHead(sort(list.getHead()));
 		return swapComp;
 	}
 	
+	/**
+	 * Método recursivo MergeSort.
+	 * @param head
+	 * @return
+	 */
 	private Node sort(Node head) {
 		if(head.getNext() != null) {
 			Node middle = getMiddle(head);
@@ -27,6 +37,12 @@ public class MergeSort {
 		return head;
 	}
 	
+	/**
+	 * Método que faz o merge na volta da recursão.
+	 * @param head
+	 * @param middle
+	 * @return
+	 */
 	private Node merge(Node head, Node middle) {
 		LinkedList list = new LinkedList();
 		while(head != null || middle != null) {
@@ -52,7 +68,11 @@ public class MergeSort {
 		return list.getHead();
 	}
 	
-	
+	/**
+	 * Método que acha o nó no meio da lista.
+	 * @param head
+	 * @return
+	 */
 	private Node getMiddle(Node head) {
 		Node no1 = head;
 		Node no2 = head;

@@ -6,7 +6,12 @@ import util.LinkedList;
 import util.Node;
 
 public class BubbleSort {
-
+	
+	/**
+	 * Metodo que ordena a lista com BubbleSort.
+	 * @param list
+	 * @return
+	 */
 	public long[] sort(LinkedList list) {
 		long[] swapComp = {0, 0};
 		

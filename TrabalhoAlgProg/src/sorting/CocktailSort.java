@@ -5,8 +5,13 @@ import util.Node;
 
 public class CocktailSort {
 	
-	long swapComp[] = {0, 0};
+	long swapComp[] = {0, 0}; // Contador de comparações e swaps.
 	
+	/**
+	 * Método que ordena a lista pelo CocktailSort.
+	 * @param list
+	 * @return
+	 */
 	public long[] sort(LinkedList list) {
 		
 		int i;

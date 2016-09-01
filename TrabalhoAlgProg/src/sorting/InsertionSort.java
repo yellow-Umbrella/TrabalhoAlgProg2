@@ -5,8 +5,13 @@ import util.Node;
 
 public class InsertionSort {
 
+	/**
+	 * Método que ordena a lista pelo InsertionSort.
+	 * @param list
+	 * @return
+	 */
 	public long[] sort(LinkedList list) {
-		long[] swapComp = {0, 0};
+		long[] swapComp = {0, 0}; //Contador de swaps e comparações.
 		
 		for(Node nodeI = list.get(0); nodeI != null; nodeI = nodeI.getNext()) {
 			Node nodeJ = nodeI;

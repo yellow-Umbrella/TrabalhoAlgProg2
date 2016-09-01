@@ -1,4 +1,4 @@
-package mainFiles;
+package mainAux;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -15,7 +15,7 @@ public class FileCreatorMain {
 		
 		if("Digite exatamente este texto para continuar:".equals(scan.nextLine())) {
 			
-			// Cria os arquivos de (nome.txt, número de inteiros)
+			// Cria os arquivos de (nome.txt, nï¿½mero de inteiros)
 			
 			file.writer("10.txt", 10);
 			file.writer("1000.txt", 1000);

@@ -1,4 +1,4 @@
-package tests;
+package mainAux;
 
 import util.LinkedList;
 import util.Node;

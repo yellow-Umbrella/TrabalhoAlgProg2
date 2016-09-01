@@ -6,8 +6,13 @@ import util.Node;
 
 public class BubbleSortO {
 	
+	/**
+	 * Método que ordena a lista pelo BubbleSort Optimizado.
+	 * @param list
+	 * @return
+	 */
 	public long[] sort(LinkedList list) {
-		long[] swapComp = {0, 0};
+		long[] swapComp = {0, 0}; // Contador de comparações e swaps.
 		boolean sorted; // variavel de otimizacao
 		
 		for(int i = 0; i < list.size(); i++) {

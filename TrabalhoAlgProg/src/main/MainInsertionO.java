@@ -2,8 +2,8 @@ package main;
 
 import java.io.IOException;
 
+import mainAux.TestaOrdenacao;
 import sorting.InsertionSortO;
-import tests.TestaOrdenacao;
 import util.FileRandom;
 import util.LinkedList;
 

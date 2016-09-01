@@ -5,13 +5,24 @@ import util.Node;
 
 public class QuickSort {
 	
-	long[] swapComp = {0, 0};
+	long[] swapComp = {0, 0}; //Contador de swaps e comparações.
 
+	/**
+	 * Método que ordena a lista pelo QuickSort
+	 * @param list
+	 * @return
+	 */
 	public long[] sort(LinkedList list) {
 		quickSort(list, list.getHead(), list.getTail());
 		return swapComp;
 	}
 	
+	/**
+	 * Método recursivo QuickSort.
+	 * @param list
+	 * @param left
+	 * @param right
+	 */
 	private void quickSort(LinkedList list, Node left, Node right) {
 		
 		

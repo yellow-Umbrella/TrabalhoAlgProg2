@@ -5,12 +5,23 @@ public class Node implements Comparable<Object> {
 	protected int value;
 	protected Node next, prev;
 	
-	public Node() {}//
+	/**
+	 * Contrutor que cria um Nó vazio.
+	 */
+	public Node() {}
 	
+	/**
+	 * Contrutor que cria um Nó com o valor recebido.
+	 * @param value
+	 */
 	public Node(int value) {
 		this.value = value;
 	}
 	
+	/**
+	 * Contrutor que cria uma cópia do Nó recebido.
+	 * @param node
+	 */
 	public Node(Node node) {
 		this.value = node.value;
 		this.next = node.next;
@@ -45,10 +56,17 @@ public class Node implements Comparable<Object> {
 		return prev;
 	}
 	
+	/**
+	 * Método que retorna em String o valor do nó.
+	 */
+	@Override
 	public String toString() {
 		return value + "";
 	}
 	
+	/**
+	 * Método que diz se o nó é igual ao recebido.
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Node) {
@@ -59,6 +77,9 @@ public class Node implements Comparable<Object> {
 		return false;
 	}
 
+	/**
+	 * Método que compara os valores dos nós.
+	 */
 	@Override
 	public int compareTo(Object o) {
 		if(o instanceof Node) {

@@ -6,8 +6,8 @@ import java.util.NoSuchElementException;
 
 public class LinkedList implements List , Iterable<Node>{
 	
-	private int size = 0;
-	private Node head, tail;
+	private int size = 0; //Tamanho da lista
+	private Node head, tail; //Nós do começo e final da lista.
 	
 	/**
 	 * Construtor cria uma lista vazia.
@@ -91,7 +91,7 @@ public class LinkedList implements List , Iterable<Node>{
 	}
 	
 	/**
-	 * Retira o noh correspondente ao index.
+	 * Retira o noh correspondente do index.
 	 * @param index da posicao a ser retirada.
 	 */
 	@Override
@@ -122,7 +122,7 @@ public class LinkedList implements List , Iterable<Node>{
 	}
 	
 	/**
-	 * Troca os valores das posicoes
+	 * Troca os valores das posicoes fornecidas.
 	 */
 	@Override
 	public void swap(int i1, int i2) throws RuntimeException {
@@ -233,33 +233,10 @@ public class LinkedList implements List , Iterable<Node>{
 		this.tail = node;
 		size++;
 	}
-
 	
 	/**
-	 * 
-	 * @param begin include 0
-	 * @param end exclude end i.e end 10 go only to 9
-	 * @return
+	 * Método que retorna em String o conteudo da lista.
 	 */
-//	public LinkedList subList(int begin, int end) {
-//		LinkedList newList = new LinkedList();
-//		Node nodeB = get(begin);
-//		nodeB.prev = null;
-//		newList.head = nodeB;
-//		
-//		Node nodeE = get(end-1);
-//		nodeE.next = null;
-//		newList.tail = nodeE;
-//		
-//		Node n = newList.head;
-//		while(n != null) {
-//			newList.size++;
-//			n = n.next;
-//		}
-//		
-//		return newList;
-//	}
-	
 	@Override
 	public String toString() {
 		String stg = "";
@@ -275,6 +252,9 @@ public class LinkedList implements List , Iterable<Node>{
 		
 	}
 
+	/**
+	 * Método que retorna o Iterador da lista.
+	 */
 	@Override
 	public Iterator<Node> iterator() {
 		final LinkedList list = this;
@@ -309,10 +289,18 @@ public class LinkedList implements List , Iterable<Node>{
 		};
 	}
 
+	/**
+	 * Método que retorna o começo (Head) da lista.
+	 * @return
+	 */
 	public Node getHead() {
 		return head;
 	}
 
+	/**
+	 * Método que altera o começo (Head) da lista.
+	 * @param head
+	 */
 	public void setHead(Node head) {
 		if(head == null) {
 			size = 0;
