@@ -3,7 +3,7 @@ package main;
 import java.io.IOException;
 
 import sorting.CocktailSort;
-import toDo.TestaOrdenacao;
+import tests.TestaOrdenacao;
 import util.FileRandom;
 import util.LinkedList;
 

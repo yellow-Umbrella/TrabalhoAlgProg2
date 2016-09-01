@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import sorting.BubbleSort;
 import sorting.BubbleSortO;
-import toDo.TestaOrdenacao;
+import tests.TestaOrdenacao;
 import util.FileRandom;
 import util.LinkedList;
 

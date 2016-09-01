@@ -3,7 +3,7 @@ package tests;
 import java.io.IOException;
 
 import sorting.InsertionSort;
-import toDo.InsertionSortO;
+import sorting.InsertionSortO;
 import util.FileRandom;
 import util.LinkedList;
 

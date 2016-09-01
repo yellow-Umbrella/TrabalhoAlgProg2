@@ -1,4 +1,4 @@
-package toDo;
+package tests;
 
 import util.LinkedList;
 import util.Node;

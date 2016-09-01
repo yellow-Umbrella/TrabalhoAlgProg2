@@ -1,6 +1,6 @@
 package tests;
 
-import toDo.InsertionSortO;
+import sorting.InsertionSortO;
 import util.LinkedList;
 
 public class MergeTest {

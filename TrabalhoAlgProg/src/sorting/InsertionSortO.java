@@ -1,4 +1,4 @@
-package toDo;
+package sorting;
 
 import util.LinkedList;
 import util.Node;
