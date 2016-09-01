@@ -1,11 +1,11 @@
 package tests;
 
-import sorting.MergeSort;
+import toDo.InsertionSortO;
 import util.LinkedList;
 
 public class MergeTest {
 	public static void main(String[] args) {
-		MergeSort merge = new MergeSort();
+		InsertionSortO merge = new InsertionSortO();
 		int[] vet = {7, 676, 22, 11, 72, 31, 11, 0, 1, 2, 3, 676, 5, 4};
 		LinkedList list = new LinkedList(vet);
 		

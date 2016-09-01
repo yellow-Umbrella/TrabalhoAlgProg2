@@ -331,9 +331,4 @@ public class LinkedList implements List , Iterable<Node>{
 		}
 	}
 
-	public void fixHeadTaill() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
