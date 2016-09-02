@@ -35,7 +35,7 @@ public class MainBubble {
 		//System.out.println(list1);
 
 		////////////////////////////////////////////////////////////
-		LinkedList list2 = file.reader("10000.txt"); //Lista recebe os 10.000 números do arquivo 10000.txt
+		LinkedList list2 = file.reader("10000.txt"); //Lista recebe os 10.000 números do arquivo 10000.txt.
 
 		time1 = System.nanoTime(); //Pega o tempo antes da ordenação.
 		swapComp = bubble.sort(list2); //Ordena a lista e retorna quantas comparações e swaps ocorreram.
@@ -45,32 +45,32 @@ public class MainBubble {
 		//System.out.println(list2);
 
 		////////////////////////////////////////////////////////////
-		LinkedList list3 = file.reader("20000.txt");
+		LinkedList list3 = file.reader("20000.txt"); //Lista recebe os 20.000 números do arquivo 20000.txt.
 
-		time1 = System.nanoTime();
-		swapComp = bubble.sort(list3);
-		time2 = System.nanoTime();
-		test.testar(list3);
+		time1 = System.nanoTime(); //Pega o tempo antes da ordenação.
+		swapComp = bubble.sort(list3); //Ordena a lista e retorna quantas comparações e swaps ocorreram.
+		time2 = System.nanoTime(); //Pega o tempo depois da ordenação.
+		test.testar(list3); //Verifica de a lista realmente foi ordenada.
 		System.out.println(" 20.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list3);
 
 		////////////////////////////////////////////////////////////
-		LinkedList list4 = file.reader("50000.txt");
+		LinkedList list4 = file.reader("50000.txt"); //Lista recebe os 50.000 números do arquivo 50000.txt.
 
-		time1 = System.nanoTime();
-		swapComp = bubble.sort(list4);
-		time2 = System.nanoTime();
-		test.testar(list4);
+		time1 = System.nanoTime(); //Pega o tempo antes da ordenação.
+		swapComp = bubble.sort(list4); //Ordena a lista e retorna quantas comparações e swaps ocorreram.
+		time2 = System.nanoTime(); //Pega o tempo depois da ordenação.
+		test.testar(list4); //Verrifica se a lista realmente foi ordenada.
 		System.out.println(" 50.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list4);
 
 		////////////////////////////////////////////////////////////
-		LinkedList list5 = file.reader("100000.txt");
+		LinkedList list5 = file.reader("100000.txt"); //Lista recebe os 100.000 números do arquivo 100000.txt.
 
-		time1 = System.nanoTime();
-		swapComp = bubble.sort(list5);
-		time2 = System.nanoTime();
-		test.testar(list5);
+		time1 = System.nanoTime(); //Pega o tempo antes da ordenação.
+		swapComp = bubble.sort(list5); //Ordena a lista e retorna quantas comparações e swaps ocorreram.
+		time2 = System.nanoTime(); //Pega o tempo depois da ordenação.
+		test.testar(list5); //Verifica se a lista realmente foi ordenada.
 		System.out.println("100.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list5);
 		
