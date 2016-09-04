@@ -10,12 +10,17 @@ import util.LinkedList;
 public class MainInsertion {
 
 	public static void main(String[] args) throws IOException {
-		TestaOrdenacao test = new TestaOrdenacao();
-		FileRandom file = new FileRandom();
-		InsertionSort inserction = new InsertionSort();
-		long time1, time2;
-		long[] swapComp;
+		TestaOrdenacao test = new TestaOrdenacao(); //Objeto que verifica se a lista esta ordenada.
+		FileRandom file = new FileRandom(); //Objeto que le os números do arquivo préviamente gerado.
+		InsertionSort inserction = new InsertionSort(); //Objeto com o método de ordenação InsertionSort.
+		long time1, time2; //Tempo antes e depois da ordenação.
+		long[] swapComp; //Contadores de trocas e comparações.
 		////////////////////////////////////////////////////////////
+		
+		// Lista recebe os 1000 números do arquivo 1000.txt, pega o tempo antes da ordenação, ordena pelo InsertionSort
+		// e pega o tempo depois.
+		// Em seguida verifica se a lista realmente foi ordenada.
+		
 		LinkedList list0 = file.reader("1000.txt");
 
 		time1 = System.nanoTime();
@@ -26,6 +31,9 @@ public class MainInsertion {
 		//System.out.println(list0);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 5000.txt.
+		
 		LinkedList list1 = file.reader("5000.txt");
 
 		time1 = System.nanoTime();
@@ -36,6 +44,9 @@ public class MainInsertion {
 		//System.out.println(list1);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 10000.txt.
+		
 		LinkedList list2 = file.reader("10000.txt");
 
 		time1 = System.nanoTime();
@@ -46,6 +57,9 @@ public class MainInsertion {
 		//System.out.println(list2);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 20000.txt.
+		
 		LinkedList list3 = file.reader("20000.txt");
 
 		time1 = System.nanoTime();
@@ -56,6 +70,9 @@ public class MainInsertion {
 		//System.out.println(list3);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 50000.txt.
+		
 		LinkedList list4 = file.reader("50000.txt");
 
 		time1 = System.nanoTime();
@@ -66,6 +83,9 @@ public class MainInsertion {
 		//System.out.println(list4);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 100000.txt.
+		
 		LinkedList list5 = file.reader("100000.txt");
 
 		time1 = System.nanoTime();

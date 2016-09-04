@@ -16,36 +16,50 @@ public class MainCocktail {
 		Long time1, time2; //Tempo antes e depois da ordenação.
 		long[] swapComp; //Contadores de trocas e comparações.
 		////////////////////////////////////////////////////////////
-		LinkedList list0 = file.reader("1000.txt"); //Lista recebe os 1.000 números do arquivo 1000.txt.
+		
+		// Lista recebe os 1000 números do arquivo 1000.txt, pega o tempo antes da ordenação, ordena pelo CocktailSort
+		// e pega o tempo depois.
+		// Em seguida verifica se a lista realmente foi ordenada.
+		
+		LinkedList list0 = file.reader("1000.txt");
 
-		time1 = System.nanoTime(); //Pega o tempo antes da ordenação.
-		swapComp = cocktail.sort(list0); //Ordena a lista e retorna a quantidade de trocas e comparações.
-		time2 = System.nanoTime(); //Pega o tempo depois da Ordenação.
-		test.testar(list0); //Verifica se a lista realmente esta ordenada.
+		time1 = System.nanoTime();
+		swapComp = cocktail.sort(list0);
+		time2 = System.nanoTime();
+		test.testar(list0);
 		System.out.println("  1.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list0);
 
 		////////////////////////////////////////////////////////////
-		LinkedList list1 = file.reader("5000.txt"); //Lista recebe os 5.000 números do arquivo 5000.txt.
+		
+		//Repete as ações anteriores com o arquivo 5000.txt.
+		
+		LinkedList list1 = file.reader("5000.txt");
 
-		time1 = System.nanoTime(); //Pega o tempo antes da ordenação.
-		swapComp = cocktail.sort(list1); //Ordena a lista e retorna a quantidade de trocas e comparações.
-		time2 = System.nanoTime(); //Pega o tempo depois da ordenação.
-		test.testar(list1); //Verifica de a lista realmetne esta ordenada.
+		time1 = System.nanoTime();
+		swapComp = cocktail.sort(list1);
+		time2 = System.nanoTime();
+		test.testar(list1);
 		System.out.println("  5.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list1);
 
 		////////////////////////////////////////////////////////////
-		LinkedList list2 = file.reader("10000.txt"); //Lista recebe os 10.000 números do arquivo 10000.txt.
+		
+		//Repete as ações anteriores com o arquivo 10000.txt.
+		
+		LinkedList list2 = file.reader("10000.txt");
 
-		time1 = System.nanoTime(); //Pega o tempo antes da ordenação.
-		swapComp = cocktail.sort(list2); //Ordena a lista e retorna a quantidade de trocas e comprarações.
+		time1 = System.nanoTime();
+		swapComp = cocktail.sort(list2);
 		time2 = System.nanoTime();
 		test.testar(list2);
 		System.out.println(" 10.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list2);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 20000.txt.
+		
 		LinkedList list3 = file.reader("20000.txt");
 
 		time1 = System.nanoTime();
@@ -56,6 +70,9 @@ public class MainCocktail {
 		//System.out.println(list3);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 50000.txt.
+		
 		LinkedList list4 = file.reader("50000.txt");
 
 		time1 = System.nanoTime();
@@ -66,6 +83,9 @@ public class MainCocktail {
 		//System.out.println(list4);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 100000.txt.
+		
 		LinkedList list5 = file.reader("100000.txt");
 
 		time1 = System.nanoTime();

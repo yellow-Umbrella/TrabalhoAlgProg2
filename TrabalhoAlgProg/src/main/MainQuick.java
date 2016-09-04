@@ -9,11 +9,15 @@ import util.LinkedList;
 public class MainQuick {
 
 	public static void main(String[] args) throws IOException {
-		FileRandom file = new FileRandom();
-		QuickSort quick = new QuickSort();
-		Long time1, time2;
-		long[] swapComp;
+		FileRandom file = new FileRandom(); //Objeto que le os números do arquivo préviamente gerado.
+		QuickSort quick = new QuickSort(); //Objeto com o método de ordenação QuickSort.
+		Long time1, time2; //Tempo antes e depois da ordenação.
+		long[] swapComp; //Contadores de trocas e comparações.
 		////////////////////////////////////////////////////////////
+		
+		// Lista recebe os 1000 números do arquivo 1000.txt, pega o tempo antes da ordenação, ordena pelo QuickSort
+		// e pega o tempo depois.
+		
 		LinkedList list0 = file.reader("1000.txt");
 
 		time1 = System.nanoTime();
@@ -24,6 +28,9 @@ public class MainQuick {
 		//System.out.println(list0);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 5000.txt.
+		
 		LinkedList list1 = file.reader("5000.txt");
 
 		time1 = System.nanoTime();
@@ -34,6 +41,9 @@ public class MainQuick {
 		//System.out.println(list1);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 10000.txt.
+		
 		LinkedList list2 = file.reader("10000.txt");
 
 		time1 = System.nanoTime();
@@ -44,6 +54,9 @@ public class MainQuick {
 		//System.out.println(list2);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 20000.txt.
+		
 		LinkedList list3 = file.reader("20000.txt");
 
 		time1 = System.nanoTime();
@@ -54,6 +67,9 @@ public class MainQuick {
 		//System.out.println(list3);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 50000.txt.
+		
 		LinkedList list4 = file.reader("50000.txt");
 
 		time1 = System.nanoTime();
@@ -64,6 +80,9 @@ public class MainQuick {
 		//System.out.println(list4);
 
 		////////////////////////////////////////////////////////////
+		
+		//Repete as ações anteriores com o arquivo 100000.txt.
+		
 		LinkedList list5 = file.reader("100000.txt");
 
 		time1 = System.nanoTime();
