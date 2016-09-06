@@ -2,10 +2,10 @@ package main;
 
 import java.io.IOException;
 
-import mainAux.TestaOrdenacao;
 import sorting.InsertionSort;
 import util.FileRandom;
 import util.LinkedList;
+import util.TestaOrdenacao;
 
 public class MainInsertion {
 

@@ -2,11 +2,11 @@ package main;
 
 import java.io.IOException;
 
-import mainAux.TestaOrdenacao;
 import sorting.BubbleSort;
 import sorting.BubbleSortO;
 import util.FileRandom;
 import util.LinkedList;
+import util.TestaOrdenacao;
 
 public class MainBubbleO {
 
