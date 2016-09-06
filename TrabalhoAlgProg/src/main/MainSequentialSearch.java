@@ -15,9 +15,10 @@ public class MainSequentialSearch {
 		long time1 = 0, time2 = 0;
 		int value;
 		
-		LinkedList list0 = file.reader("1000.txt");
-		LinkedList list1 = file.reader("100 - 1000.txt");
-		
+		LinkedList list0 = file.reader("1000.txt"); //carrega valores do arquivo na lista
+		LinkedList list1 = file.reader("100 - 1000.txt"); //carrega valores do arquivo na lista
+
+		//verifica cada item da lista menor na maior
 		for(Node nodeI = list1.get(0); nodeI != null; nodeI = nodeI.getNext()) {
 			value = nodeI.getValue();
 			time1 += System.nanoTime();
@@ -31,9 +32,10 @@ public class MainSequentialSearch {
 		time1 = 0;
 		time2 = 0;
 		
-		LinkedList list2 = file.reader("5000.txt");
-		LinkedList list3 = file.reader("100 - 5000.txt");
-		
+		LinkedList list2 = file.reader("5000.txt"); //carrega valores do arquivo na lista
+		LinkedList list3 = file.reader("100 - 5000.txt"); //carrega valores do arquivo na lista
+
+		//verifica cada item da lista menor na maior
 		for(Node nodeI = list3.get(0); nodeI != null; nodeI = nodeI.getNext()) {
 			value = nodeI.getValue();
 			time1 += System.nanoTime();
@@ -47,9 +49,10 @@ public class MainSequentialSearch {
 	time1 = 0;
 	time2 = 0;
 	
-	LinkedList list4 = file.reader("10000.txt");
-	LinkedList list5 = file.reader("100 - 10000.txt");
-	
+	LinkedList list4 = file.reader("10000.txt"); //carrega valores do arquivo na lista
+	LinkedList list5 = file.reader("100 - 10000.txt"); //carrega valores do arquivo na lista
+
+	//verifica cada item da lista menor na maior
 	for(Node node = list5.get(0); node != null; node = node.getNext()) {
 		value = node.getValue();
 		time1 += System.nanoTime();
@@ -64,9 +67,10 @@ public class MainSequentialSearch {
 	time1 = 0;
 	time2 = 0;
 	
-	LinkedList list6 = file.reader("20000.txt");
-	LinkedList list7 = file.reader("100 - 20000.txt");
-	
+	LinkedList list6 = file.reader("20000.txt"); //carrega valores do arquivo na lista
+	LinkedList list7 = file.reader("100 - 20000.txt"); //carrega valores do arquivo na lista
+
+	//verifica cada item da lista menor na maior
 	for(Node nodeI = list7.get(0); nodeI != null; nodeI = nodeI.getNext()) {
 		value = nodeI.getValue();
 		time1 += System.nanoTime();
@@ -80,9 +84,10 @@ public class MainSequentialSearch {
 	time1 = 0;
 	time2 = 0;
 	
-	LinkedList list8 = file.reader("50000.txt");
-	LinkedList list9 = file.reader("100 - 50000.txt");
-	
+	LinkedList list8 = file.reader("50000.txt"); //carrega valores do arquivo na lista
+	LinkedList list9 = file.reader("100 - 50000.txt"); //carrega valores do arquivo na lista
+
+	//verifica cada item da lista menor na maior
 	for(Node node = list9.get(0); node != null; node = node.getNext()) {
 		value = node.getValue();
 		time1 += System.nanoTime();
@@ -96,9 +101,10 @@ public class MainSequentialSearch {
 	time1 = 0;
 	time2 = 0;
 	
-	LinkedList list10 = file.reader("100000.txt");
-	LinkedList list11 = file.reader("100 - 100000.txt");
+	LinkedList list10 = file.reader("100000.txt"); //carrega valores do arquivo na lista
+	LinkedList list11 = file.reader("100 - 100000.txt"); //carrega valores do arquivo na lista
 	
+	//verifica cada item da lista menor na maior
 	for(Node node = list11.get(0); node != null; node = node.getNext()) {
 		value = node.getValue();
 		time1 += System.nanoTime();

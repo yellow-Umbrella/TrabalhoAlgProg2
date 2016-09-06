@@ -5,10 +5,12 @@ import java.io.IOException;
 import sorting.QuickSort;
 import util.FileRandom;
 import util.LinkedList;
+import util.TestaOrdenacao;
 
 public class MainQuick {
 
 	public static void main(String[] args) throws IOException {
+		TestaOrdenacao test = new TestaOrdenacao(); //Objeto que verifica se a lista esta ordenada.
 		FileRandom file = new FileRandom(); //Objeto que le os números do arquivo préviamente gerado.
 		QuickSort quick = new QuickSort(); //Objeto com o método de ordenação QuickSort.
 		Long time1, time2; //Tempo antes e depois da ordenação.
@@ -23,7 +25,7 @@ public class MainQuick {
 		time1 = System.nanoTime();
 		swapComp = quick.sort(list0);
 		time2 = System.nanoTime();
-		
+		test.testar(list0);
 		System.out.println("  1.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list0);
 
@@ -36,7 +38,7 @@ public class MainQuick {
 		time1 = System.nanoTime();
 		swapComp = quick.sort(list1);
 		time2 = System.nanoTime();
-
+		test.testar(list1);
 		System.out.println("  5.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list1);
 
@@ -49,7 +51,7 @@ public class MainQuick {
 		time1 = System.nanoTime();
 		swapComp = quick.sort(list2);
 		time2 = System.nanoTime();
-
+		test.testar(list2);
 		System.out.println(" 10.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list2);
 
@@ -62,7 +64,7 @@ public class MainQuick {
 		time1 = System.nanoTime();
 		swapComp = quick.sort(list3);
 		time2 = System.nanoTime();
-
+		test.testar(list3);
 		System.out.println(" 20.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list3);
 
@@ -75,7 +77,7 @@ public class MainQuick {
 		time1 = System.nanoTime();
 		swapComp = quick.sort(list4);
 		time2 = System.nanoTime();
-
+		test.testar(list4);
 		System.out.println(" 50.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list4);
 
@@ -88,7 +90,7 @@ public class MainQuick {
 		time1 = System.nanoTime();
 		swapComp = quick.sort(list5);
 		time2 = System.nanoTime();
-
+		test.testar(list5);
 		System.out.println("100.000 - Tempo: " + (time2 - time1) + " Trocas: " + swapComp[0] + " Comparacoes: " + swapComp[1]);
 		//System.out.println(list5);
 		

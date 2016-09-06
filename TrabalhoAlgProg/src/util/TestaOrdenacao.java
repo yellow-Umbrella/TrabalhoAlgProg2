@@ -1,7 +1,4 @@
-package mainAux;
-
-import util.LinkedList;
-import util.Node;
+package util;
 
 public class TestaOrdenacao {
 
